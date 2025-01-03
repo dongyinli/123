@@ -1,0 +1,13 @@
+[package]
+name = "interceptor-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ilhook = "2.1.1"
+
+[profile.release]
+strip = true      # Automatically strip symbols from the binary.
+lto = true        # Link-time optimization.
+opt-level = 3     # Optimization level 3.
+codegen-units = 1 # Maximum size reduction optimizations.
